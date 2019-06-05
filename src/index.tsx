@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+// const initialData = JSON.parse(document.getElementById('initial-data').getAttribute('data-json'));
+// ReactDOM.render(<App {...initialData} />, document.getElementById('root'));
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
