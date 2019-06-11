@@ -1,9 +1,20 @@
-import React from 'react';
+import * as React from 'react';
+import Counter from './components/Counter';
 
-const App: React.FC = () => {
-  return (
-    <div>Hello, world!</div>
-  );
-};
+interface AppProps {
+
+}
+
+interface AppState {
+
+}
+
+class App extends React.Component<AppProps, AppState> {
+  render() {
+    return (
+      <Counter initialCounter={5} />
+    );
+  }
+}
 
 export default App;

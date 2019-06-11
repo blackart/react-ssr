@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "react",
+    "noEmit": false,
+    "skipLibCheck": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
