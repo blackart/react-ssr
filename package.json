@@ -5,6 +5,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "cookie-parser": "^1.4.4",
+    "css-loader": "^3.0.0",
     "express": "^4.17.1",
     "history": "^4.9.0",
     "mobx": "^5.10.0",
@@ -18,10 +19,12 @@
     "react-loadable": "^5.5.0",
     "react-router": "^5.0.1",
     "react-scripts": "^3.0.1",
+    "sass-loader": "^7.1.0",
     "ts-loader": "^6.0.2",
     "typescript": "^3.5.1"
   },
   "scripts": {
+    "watch:scss": "tsm src --watch --nameFormat none",
     "start:client": "react-scripts start",
     "start:server": "node dist/server.js",
     "build:client": "react-scripts build",

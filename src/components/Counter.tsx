@@ -1,8 +1,5 @@
 import * as React from 'react';
-import * as styles from './Counter.scss';
-import cn from 'classnames';
-
-// let cx = cn.bind(styles);
+import * as styles from './Counter.module.scss';
 
 export interface CounterProps {
     initialCounter: number;
@@ -23,8 +20,6 @@ class Counter extends React.Component<CounterProps, CounterState> {
     }
 
     render() {
-        console.log(styles);
-
         return (
           <div>
               <h1 className={styles.text}>counter at: {this.state.counter}</h1>

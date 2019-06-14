@@ -14,7 +14,7 @@ module.exports = function (env, argv) {
                 build: path.resolve(__dirname, 'build'),
                 dist: path.resolve(__dirname, 'dist')
             },
-            extensions: [".ts", ".tsx", ".js", ".json"],
+            extensions: [".ts", ".tsx", ".js", ".json", ".css", ".scss"],
             // modules: ["src", "node_modules"]
         },
         module: {
@@ -30,11 +30,11 @@ module.exports = function (env, argv) {
                         'file-loader'
                     ]
                 },
-                { test: /\.css$/, loader: 'typings-for-css-modules-loader?modules' },
-                // { test: /\.scss$/, loader: 'typings-for-css-modules-loader?modules&sass' },
                 {
                     test: /\.scss$/,
-                    include: path.join(__dirname, 'src/components'),
+                    include: [
+                      path.join(__dirname, 'src/components')
+                    ],
                     use: [
                         { loader: 'style-loader'},
                         {
