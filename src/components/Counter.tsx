@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {text} from './Counter.scss';
+import * as styles from './Counter.scss';
 import cn from 'classnames';
 
 // let cx = cn.bind(styles);
@@ -23,11 +23,11 @@ class Counter extends React.Component<CounterProps, CounterState> {
     }
 
     render() {
-        console.log(text);
+        console.log(styles);
 
         return (
           <div>
-              <h1 className={'text'}>counter at: {this.state.counter}</h1>
+              <h1 className={styles.text}>counter at: {this.state.counter}</h1>
               <button onClick={() => this.incrementCounter()}>+</button>
           </div>
         );
