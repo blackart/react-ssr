@@ -9,6 +9,8 @@ import {Provider} from 'mobx-react';
 import {RouterStore, syncHistoryWithStore} from 'mobx-react-router';
 
 import App from './App';
+import {I18nextProvider} from "react-i18next";
+import i18n from "./i18n/i18n";
 
 const root = document.getElementById('root');
 const browserHistory = history.createBrowserHistory();
@@ -20,7 +22,9 @@ const syncHistory = syncHistoryWithStore(browserHistory, routerStore);
 const AppWrapper = (
   <Provider routerStore={routerStore}>
       <Router history={syncHistory}>
-          <App/>
+          <I18nextProvider i18n={i18n}>
+              <App/>
+          </I18nextProvider>
       </Router>
   </Provider>
 );

@@ -1,10 +1,22 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
+import {WithTranslation, withTranslation} from 'react-i18next';
+import LanguageSwitcher from "../components/LanguageSwitcher/LanguageSwitcher";
 
-class Main extends React.Component {
+interface AppProps extends WithTranslation {
+
+}
+
+class Main extends React.Component<AppProps> {
     render() {
+        const {t, i18n} = this.props;
+
         return (
           <div>
+              <div>
+                <LanguageSwitcher/>
+              </div>
+              <span>{t('ui-welcome')}</span>
               <nav>
                   <ul>
                       <li><Link to='/'>Main</Link></li>
@@ -17,4 +29,4 @@ class Main extends React.Component {
     }
 }
 
-export default Main;
+export default withTranslation()(Main);
