@@ -9,6 +9,7 @@
       "esnext"
     ],
     "jsx": "preserve",
+    "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
     "allowJs": true,

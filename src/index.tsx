@@ -9,6 +9,7 @@ import {Provider} from 'mobx-react';
 import {RouterStore, syncHistoryWithStore} from 'mobx-react-router';
 
 import App from './App';
+import AppStore from './store/AppStore';
 import {I18nextProvider} from "react-i18next";
 import i18n from "./i18n/i18n";
 
@@ -18,9 +19,11 @@ const routerStore = new RouterStore();
 const syncHistory = syncHistoryWithStore(browserHistory, routerStore);
 
 // const initialState = isServer() ? {} : window.__PRELOADED_STATE__ || {};
+const initialState = {language: i18n.language};
+const appStore = new AppStore(initialState);
 
 const AppWrapper = (
-  <Provider routerStore={routerStore}>
+  <Provider routerStore={routerStore} appStore={appStore}>
       <Router history={syncHistory}>
           <I18nextProvider i18n={i18n}>
               <App/>

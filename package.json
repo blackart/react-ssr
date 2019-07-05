@@ -25,6 +25,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.0.1",
     "sass-loader": "^7.1.0",
+    "store": "^2.0.12",
     "ts-loader": "^6.0.2",
     "typescript": "^3.5.1"
   },
