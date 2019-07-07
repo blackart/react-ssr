@@ -1,5 +1,9 @@
-import * as React from 'react';
+export enum LocalStorageKeys {
+    LANG = 'lang'
+}
 
-interface AppState {
-
+export enum Routes {
+    MAIN_PAGE = '/',
+    PAGE_1 = '/page1',
+    PAGE_2 = '/page2',
 }
