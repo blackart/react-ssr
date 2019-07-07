@@ -1,14 +1,11 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
-import {StoreContext} from '../store/context'
 import {Routes} from '../store/meta'
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from "../components/LanguageSwitcher/LanguageSwitcher";
 
 const Main = () => {
     const {t} = useTranslation();
-    const store = React.useContext(StoreContext);
-
     return (
       <div>
           <div>

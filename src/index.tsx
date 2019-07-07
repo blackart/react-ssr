@@ -22,16 +22,14 @@ const syncHistory = syncHistoryWithStore(browserHistory, routerStore);
 // const initialState = {language: i18n.language};
 // const appStore = new Store(initialState);
 
-{/*<Provider routerStore={routerStore} appStore={appStore} i18n={i18n}>*/}
-
 const AppWrapper = (
-  <AppStoreProvider>
-      <Router history={syncHistory}>
-          <I18nextProvider i18n={i18n}>
+  <I18nextProvider i18n={i18n}>
+      <AppStoreProvider>
+          <Router history={syncHistory}>
               <App/>
-          </I18nextProvider>
-      </Router>
-  </AppStoreProvider>
+          </Router>
+      </AppStoreProvider>
+  </I18nextProvider>
 );
 
 if (root && root.hasChildNodes()) {

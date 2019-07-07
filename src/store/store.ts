@@ -1,25 +1,22 @@
-import * as React from 'react';
-import {action, computed, observable} from 'mobx';
-import { useTranslation } from 'react-i18next';
 import {LocalStorageKeys} from './meta';
+import i18next from "i18next";
 
 interface AppState {
+    i18n: i18next.i18n;
 }
 
-const store = () => {
-    return {
-        set siteLang(lang: string | null) {
-            if (lang !== null) localStorage.setItem(LocalStorageKeys.LANG, lang);
-            else localStorage.removeItem(LocalStorageKeys.LANG);
+export const createAppStore = (initState: AppState) => {
+    const store = {
+        i18n: initState.i18n,
+        set lang(value: string) {
+            store.i18n.changeLanguage(value).then(() => localStorage.setItem(LocalStorageKeys.LANG, value));
         },
-        get siteLang(): string | null {
-            return localStorage.getItem(LocalStorageKeys.LANG);
+        get lang() {
+            return store.i18n.language;
         }
-    }
+    };
+
+    return store;
 };
 
-export const createStore = () => {
-    return store();
-};
-
-export type TStore = ReturnType<typeof createStore>;
+export type TStore = ReturnType<typeof createAppStore>;

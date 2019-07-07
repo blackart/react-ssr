@@ -1,15 +1,17 @@
 import * as React from 'react';
 import { useLocalStore } from 'mobx-react-lite';
-import { createStore, TStore } from './store';
+import { createAppStore, TStore } from './store';
+import {useTranslation} from "react-i18next";
 
-export const StoreContext = React.createContext<TStore | null>(null);
+export const AppStoreContext = React.createContext<TStore | null>(null);
 
 export const AppStoreProvider: React.FC = ({children}) => {
-    const store = useLocalStore(createStore, {});
+    const {i18n} = useTranslation();
+    const store = useLocalStore(createAppStore, {i18n: i18n});
 
     return (
-      <StoreContext.Provider value={store}>
+      <AppStoreContext.Provider value={store}>
         {children}
-      </StoreContext.Provider>
+      </AppStoreContext.Provider>
     );
 };
