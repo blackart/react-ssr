@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import * as Loadable from 'react-loadable';
 import * as history from 'history';
+import * as styles from './index.module.scss';
 
 import {Router} from 'react-router';
 import {RouterStore, syncHistoryWithStore} from 'mobx-react-router';
@@ -38,6 +39,7 @@ if (root && root.hasChildNodes()) {
         ReactDOM.hydrate(AppWrapper, root);
     });
 } else {
+    if (root) root.className = styles.root;
     console.log('render');
     ReactDOM.render(AppWrapper, root);
 }

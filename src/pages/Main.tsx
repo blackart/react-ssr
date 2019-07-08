@@ -15,6 +15,7 @@ const Main = () => {
           <nav>
               <ul>
                   <li><Link to={Routes.MAIN_PAGE}>{t('page-main')}</Link></li>
+                  <li><Link to={Routes.LOGIN}>{t('login')}</Link></li>
                   <li><Link to={Routes.PAGE_1}>{t('page-1')}</Link></li>
                   <li><Link to={Routes.PAGE_2}>{t('page-2')}</Link></li>
               </ul>

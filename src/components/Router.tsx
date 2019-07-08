@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Route, Switch} from "react-router";
 import Main from "../pages/Main";
-import Login from "../pages/Login";
+import Login from "../pages/login/Login";
 import NotFound from "../pages/NotFound";
 import Admin from "../pages/Admin";
 import ProtectRoute from "./ProtectRoute";
