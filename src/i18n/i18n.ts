@@ -1,33 +1,17 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from 'i18next-browser-languagedetector'
+import LanguageDetector from 'i18next-browser-languagedetector';
+import ru from '../assets/lang/ru.json';
+import en from '../assets/lang/en.json';
 
 // the translations
 // (tip move them in a JSON file and import them)
 const resources = {
     en: {
-        translation: {
-            "ui-welcome": "Welcome to React and react-i18next",
-            "choose-lang": "Choose language",
-            "404-error": "Page not found",
-            "page-main": "Main",
-            "login": "Login",
-            "page-1": "Page 1",
-            "page-2": "Page 2",
-            "page-3": "Page 3",
-        }
+        translation: en
     },
     ru: {
-        translation: {
-            "ui-welcome": "Добро пожаловать в React и react-i18next",
-            "choose-lang": "Выберете язык",
-            "404-error": "Страница не найдена",
-            "page-main": "Главная",
-            "login": "Вход",
-            "page-1": "Страница 1",
-            "page-2": "Страница 2",
-            "page-3": "Страница 3",
-        }
+        translation: ru
     }
 };
 

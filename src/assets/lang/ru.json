@@ -1,0 +1,14 @@
+{
+  "ui-welcome": "Добро пожаловать в React и react-i18next",
+  "choose-lang": "Выберете язык",
+  "404-error": "Страница не найдена",
+  "page-main": "Главная",
+  "login": "Вход",
+  "page-1": "Страница 1",
+  "page-2": "Страница 2",
+  "page-3": "Страница 3",
+  "ui-button-login": "войти",
+  "login-page-title": "вход",
+  "ui-password-placeholder": "пароль",
+  "ui-login-placeholder": "логин"
+}

@@ -1,18 +1,11 @@
 import * as React from 'react';
-import {WithTranslation, withTranslation} from 'react-i18next';
+import {useTranslation} from 'react-i18next';
 
-interface NotFoundProps extends WithTranslation {
+const NotFound = () => {
+    const {t} = useTranslation();
+    return (
+      <div>{t('404-error')}</div>
+    );
+};
 
-}
-
-class NotFound extends React.Component<NotFoundProps> {
-    render() {
-        let {t} = this.props;
-
-        return (
-            <div>{t('404-error')}</div>
-        );
-    }
-}
-
-export default withTranslation()(NotFound);
+export default NotFound;
