@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as styles from './Login.module.scss';
-import {Button, TextField} from "@material-ui/core";
+import {Button, Fab, TextField} from "@material-ui/core";
 
 const Login = () => {
     return (
@@ -12,27 +12,28 @@ const Login = () => {
               <form className={styles.form} noValidate autoComplete="off">
                   <TextField
                     id="login-input"
-                    label="Login"
+                    placeholder="login"
                     className={styles.textField}
                     margin="normal"
                   />
 
                   <TextField
                     id="password-input"
-                    label="Password"
                     className={styles.textField}
                     type="password"
+                    placeholder="password"
                     autoComplete="current-password"
                     margin="normal"
                   />
 
-                  <Button
+                  <Fab
+                    variant="extended"
+                    aria-label="Login"
                     className={styles.button}
-                    variant="contained"
-                    color="primary"
-                  >
+                    size="medium"
+                    color="primary">
                       Login
-                  </Button>
+                  </Fab>
               </form>
           </div>
       </div>
